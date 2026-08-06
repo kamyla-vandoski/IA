@@ -3,8 +3,8 @@ const caixaPrguntas = ocumnt.querySelector(".caixa-perguntas");
 const caixaAlternativas = ocumnt.querySelector(".caixa-alternativas");
 const caixaResultado = ocumnt.querySelector(".caixa-resultado");
 const textoResultado = ocumnt.querySelector(".textoResultado");
-
 const perguntas = [
+    
   {
     enunciado:
       "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
