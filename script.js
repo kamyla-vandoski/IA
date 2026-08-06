@@ -3,13 +3,22 @@ const caixaPrguntas = ocumnt.querySelector(".caixa-perguntas");
 const caixaAlternativas = ocumnt.querySelector(".caixa-alternativas");
 const caixaResultado = ocumnt.querySelector(".caixa-resultado");
 const textoResultado = ocumnt.querySelector(".textoResultado");
-const perguntas = [
 
+const perguntas = [
   {
     enunciado:
       "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
-    alternativas: ["Isso é assustador!", "Isso é maravilhoso!"],
-  },
+    alternativas:[
+    {
+      texto: "Isso é assustador!",
+      afirmacao:"afirmacao"
+    },
+    {
+      texto:"Isso é maravilhoso!",
+      afirmacao: "afirmacao"
+    }
+  ]
+},
   {
     enunciado:
       "Com a descoberta desta tecnologia, chamada Inteligência Artificial (IA), uma professora de tecnologia da escola decidiu fazer uma sequência de aulas sobre esta tecnologia. No fim de uma aula ela pede que você escreva um trabalho sobre o uso de IA em sala de aula. Qual atitude você toma?",
