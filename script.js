@@ -44,7 +44,7 @@ const perguntas = [
       },
       {
         texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendo a importância de proteger os trabalhadores.",
-        afirmacao:"afirmacao"
+        afirmacao: "afirmacao"
       }
 
     ],
@@ -55,7 +55,7 @@ const perguntas = [
     alternativas: [
     {
       texto: "Criar uma imagem utilizando uma plataforma de design como o Paint.",
-       afirmacao:"afirmacao"
+       afirmacao: "afirmacao"
     },
     {
       texto: "Criar uma imagem utilizando um gerador de imagem de IA.",
@@ -69,11 +69,11 @@ const perguntas = [
     alternativas: [
       {
       texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
-      afirmacao:"afirmacao"
+      afirmacao: "afirmacao"
       },
       {
         texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
-        afirmacao:"afirmacao"
+        afirmacao: "afirmacao"
       }
     ],
   },
@@ -87,4 +87,11 @@ fuction mostraPergunta(){
   caixaPerguntas.textContent = perguntaAtual.enunciado;
 }
 
+fuction mostraAlternativas(){
+  for(const alternativas of perguntaAtual.alternativas) {
+    const botaoAlternativa = docment.creatElement("button");
+    botaoAlternativa.textContent = alternativa.texto;
+    caixaAlternativas.appendChild(botaoAlternativa);
+  }
+}
 mostraPergunta();
