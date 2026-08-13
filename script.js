@@ -49,7 +49,11 @@ const perguntas = [
 
     ],
   },
-  {
+ 
+}
+}
+mostraPergunta();
+ {
     enunciado:
       "Ao final da discussão, você precisou criar uma imagem no computador que representasse o que pensa sobre IA. E agora?",
     alternativas: [
@@ -85,13 +89,19 @@ letperguntaAtual;
 fuction mostraPergunta(){
   perguntaAtual = perguntas[atual];
   caixaPerguntas.textContent = perguntaAtual.enunciado;
+  mostraAlternativas();
 }
 
-fuction mostraAlternativas(){
-  for(const alternativas of perguntaAtual.alternativas) {
-    const botaoAlternativa = docment.creatElement("button");
-    botaoAlternativa.textContent = alternativa.texto;
-    caixaAlternativas.appendChild(botaoAlternativa);
-  }
+function mostraAlternativas(){
+for(const alternativa of perguntaAtual.alternativas) {
+const botaoAlternativa = document.createElement("button");
+botaoAlternativa.textContent = alternativa.texto;
+botaoAlternativa.addEventListener("click", function(){
+atual++;
+mostraPergunta();
+})
+caixaAlternativas.appendChild(botaoAlternativa);
 }
+}
+
 mostraPergunta();
