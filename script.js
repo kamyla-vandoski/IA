@@ -91,6 +91,7 @@ const perguntas = [
 
 let atual = 0;
 let perguntaAtual;
+let historiaFinal = "";
 
 function mostraPergunta() {
   if (atual >= perguntas.length) {
@@ -113,10 +114,7 @@ function mostraAlternativas() {
 
     botaoAlternativa.textContent = alternativa.texto;
 
-    botaoAlternativa.addEventListener("click", function () {
-      atual++;
-      mostraPergunta();
-    });
+    botaoAlternativa.addEventListener("click", () => respostaSelecionada(alternativa));
 
     caixaAlternativas.appendChild(botaoAlternativa);
   }
@@ -131,4 +129,12 @@ function mostraResultado() {
     "Você concluiu o quiz sobre Inteligência Artificial!";
 }
 
+function respostaSelecionada(opcaoSelecionada){
+  const afirmacoes = opcaoSelecionada.afirmacoes;
+  historiaFinal = afirmacoes;
+  .+
+  atual++;
+ mostraPergunta();
+
+}
 mostraPergunta();
